@@ -1,84 +1,168 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Sample Page</title>
+    <title>About Me - Java Backend Engineer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
         }
 
         header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
             text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e293b, #020617);
         }
 
-        nav {
-            background: #555;
-            padding: 10px;
-            text-align: center;
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
         }
 
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+        header p {
+            color: #94a3b8;
+            margin-top: 10px;
         }
 
         .container {
+            padding: 40px 10%;
+        }
+
+        h2 {
+            border-left: 5px solid #38bdf8;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
             padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .card i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #38bdf8;
         }
 
         footer {
-            background: #333;
-            color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            background: #020617;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to My Website</h1>
+    <h1>Hi, I'm a Backend Engineer</h1>
+    <p>Building scalable systems with clean architecture & real-world performance</p>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav>
-
 <div class="container">
-    <h2>Home Section</h2>
-    <p>This is a simple index.html page.</p>
 
-    <button onclick="showMessage()">Click Me</button>
+    <h2>🚀 About Me</h2>
+    <p>
+        I am a backend-focused software engineer specializing in building robust, scalable,
+        and high-performance applications. My expertise lies in designing microservices-based
+        architectures, optimizing databases, and integrating cloud-native solutions.
+    </p>
+
+    <h2>🧠 Expertise</h2>
+    <div class="skills">
+
+        <div class="card">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java</h3>
+            <p>Core Java, multithreading, performance tuning</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Spring Boot</h3>
+            <p>REST APIs, security, production-grade services</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Microservices</h3>
+            <p>Distributed systems, API gateway, service orchestration</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Spring Cloud</h3>
+            <p>Config server, Eureka, resilience patterns</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-database"></i>
+            <h3>SQL</h3>
+            <p>Query optimization, joins, indexing strategies</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-aws"></i>
+            <h3>AWS</h3>
+            <p>EC2, S3, deployment, scalable infra</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-microsoft"></i>
+            <h3>Azure</h3>
+            <p>Cloud services, deployments, integrations</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Best Practices</h3>
+            <p>Clean code, design patterns, scalable architecture</p>
+        </div>
+
+    </div>
+
+    <h2>⚡ What I Do</h2>
+    <p>
+        ✔ Design scalable backend architectures  
+        ✔ Build microservices with Spring ecosystem  
+        ✔ Optimize database performance  
+        ✔ Deploy and manage cloud-based applications  
+        ✔ Solve real-world engineering problems efficiently  
+    </p>
+
 </div>
 
 <footer>
-    <p>© 2026 My Website</p>
+    <p>© 2026 | Built with passion for backend engineering</p>
 </footer>
-
-<script>
-    function showMessage() {
-        alert("Hello! This is a sample JavaScript action.");
-    }
-</script>
 
 </body>
 </html>
+```
