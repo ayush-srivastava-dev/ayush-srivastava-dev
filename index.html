@@ -74,12 +74,26 @@ nav a:hover{color:var(--blue)}
 
 /* products */
 .bg-light{background:var(--light)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-.card{background:#fff;border-radius:var(--radius);padding:34px 28px;box-shadow:0 4px 18px rgba(11,31,58,.06);transition:.3s;border-bottom:4px solid transparent}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--accent)}
-.icon{width:56px;height:56px;border-radius:14px;background:rgba(10,88,202,.1);display:grid;place-items:center;margin-bottom:20px;font-size:1.6rem}
-.card h3{font-size:1.2rem;margin-bottom:10px}
-.card p{font-size:.95rem;color:var(--muted)}
+.services-head{text-align:center;max-width:680px;margin:0 auto 52px}
+.services-head h2{font-size:clamp(2.2rem,4.6vw,3.2rem);margin-bottom:16px}
+.services-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(11,31,58,.08);border:1px solid #e8edf5;transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-img{height:210px;display:grid;place-items:center;font-size:4.4rem;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.card-img::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,159,28,.28),transparent 55%)}
+.card-img span{position:relative;z-index:1;filter:drop-shadow(0 6px 12px rgba(0,0,0,.35))}
+.g1{background-image:linear-gradient(135deg,#0b1f3a,#0a58ca)}
+.g2{background-image:linear-gradient(135deg,#12345f,#1b7f9e)}
+.g3{background-image:linear-gradient(135deg,#7a4a00,#ff9f1c)}
+.g4{background-image:linear-gradient(135deg,#1c2b45,#4a5f86)}
+.g5{background-image:linear-gradient(135deg,#0d4a3a,#1aa07a)}
+.g6{background-image:linear-gradient(135deg,#3a1b5e,#0a58ca)}
+.card-body{padding:26px 26px 24px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.1rem;font-weight:500;margin-bottom:14px}
+.card p{font-size:.95rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:22px}
+.read-more{margin-top:auto;font:500 .9rem 'Poppins',sans-serif;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:.2s}
+.read-more:hover{color:var(--accent);gap:10px}
 
 /* why */
 .why{background:var(--navy);color:#c9d6ea}
@@ -135,8 +149,9 @@ footer .logo{color:#fff;margin-bottom:14px}
   nav a{display:block;padding:14px}
   .strip-item{border-right:0;border-bottom:1px solid #e8edf5}
   section{padding:68px 0}
+  .cards{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:560px){.row{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}.topbar .container{justify-content:center;text-align:center}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.row{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}.topbar .container{justify-content:center;text-align:center}}
 </style>
 </head>
 <body>
@@ -159,7 +174,7 @@ footer .logo{color:#fff;margin-bottom:14px}
       <ul id="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#solutions">Services</a></li>
         <li><a href="#why">Why Us</a></li>
         <li><a href="#industries">Industries</a></li>
         <li><a href="#contact" class="btn btn-primary" style="padding:10px 22px;color:var(--navy)">Contact</a></li>
@@ -211,18 +226,60 @@ footer .logo{color:#fff;margin-bottom:14px}
 
 <section class="bg-light" id="solutions">
   <div class="container">
-    <div class="section-head">
+    <div class="services-head">
       <span class="tag">What We Offer</span>
-      <h2>Our Products &amp; Solutions</h2>
-      <p>A focused range of power and electronics offerings for industrial, commercial and residential needs.</p>
+      <h2>Our Services</h2>
+      <p>Explore our range of professional services tailored for power and electronics requirements.</p>
     </div>
     <div class="cards">
-      <div class="card"><div class="icon">🔋</div><h3>Batteries &amp; Storage</h3><p>Reliable energy storage options for backup and continuous-duty applications.</p></div>
-      <div class="card"><div class="icon">🔌</div><h3>UPS &amp; Inverters</h3><p>Uninterrupted power systems that protect sensitive equipment from outages.</p></div>
-      <div class="card"><div class="icon">☀️</div><h3>Solar Solutions</h3><p>Solar power systems designed around your consumption and site conditions.</p></div>
-      <div class="card"><div class="icon">🎛</div><h3>Control Panels</h3><p>Power distribution and control panels built to specification.</p></div>
-      <div class="card"><div class="icon">🧩</div><h3>Electronic Components</h3><p>Quality components and assemblies for manufacturers and integrators.</p></div>
-      <div class="card"><div class="icon">🧰</div><h3>Service &amp; Maintenance</h3><p>Preventive maintenance, repair and annual support plans.</p></div>
+      <article class="card">
+        <div class="card-img g1"><span>🔋</span></div>
+        <div class="card-body">
+          <h3>Batteries &amp; Storage</h3>
+          <p>Reliable energy storage options for backup and continuous-duty applications, selected to match your load and runtime needs.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img g2"><span>🔌</span></div>
+        <div class="card-body">
+          <h3>UPS &amp; Inverters</h3>
+          <p>Uninterrupted power systems that protect sensitive equipment from outages, surges and voltage fluctuations.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img g3"><span>☀️</span></div>
+        <div class="card-body">
+          <h3>Solar Solutions</h3>
+          <p>Solar power systems designed around your consumption and site conditions, from planning through installation.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img g4"><span>🎛</span></div>
+        <div class="card-body">
+          <h3>Control Panels</h3>
+          <p>Power distribution and control panels built to your specification with quality components and clean workmanship.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img g5"><span>🧩</span></div>
+        <div class="card-body">
+          <h3>Electronic Components</h3>
+          <p>Quality components and assemblies for manufacturers and integrators, supplied with proper documentation.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img g6"><span>🧰</span></div>
+        <div class="card-body">
+          <h3>Service &amp; Maintenance</h3>
+          <p>Preventive maintenance, repair and annual support plans that keep your power systems running reliably.</p>
+          <a href="#contact" class="read-more">Read More <span>›</span></a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
